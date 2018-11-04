@@ -5,7 +5,6 @@ cache:
   yarn: true
 jobs:
   include:
-    - stage: test
-      script: ./scripts/test.js
+    - script: ./scripts/test.js
 notifications:
   webhooks: https://www.travisbuddy.com/
