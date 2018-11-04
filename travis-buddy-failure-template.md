@@ -9,28 +9,16 @@ Si crees que es un falso-positivo, justificalo con un comentario aca en el PR.
 
 {{#jobs}}
 
-### {{displayName}}
-
-<a href="{{link}}">Ver log</a>
-
 {{#scripts}}
 
-<details>
-  <summary>
-    <strong>
-     {{command}}
-    </strong>
-  </summary>
+**{{command}}**
 
 ```
 {{&contents}}
 ```
 
-</details>
-
+<br />
 {{/scripts}}
 {{/jobs}}
 
 Es todo!
-
-###### TravisBuddy Request Identifier: {{requestId}}
