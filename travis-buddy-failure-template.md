@@ -1,4 +1,4 @@
-## There's a problem with your PR
+## Hay un problema con tu PR
 
 Hey **{{author}}**,
 Por favor lee el siguiente log para que entiendas qué problema hay en tu PR.
