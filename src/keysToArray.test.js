@@ -28,6 +28,5 @@ describe('keysToArray', () => {
     expect(() => { keysToArray(); }).toThrow();
     expect(() => { keysToArray([90]); }).toThrow();
     expect(() => { keysToArray("what"); }).toThrow();
-    
   });
 });
