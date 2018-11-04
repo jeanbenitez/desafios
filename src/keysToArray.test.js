@@ -21,7 +21,7 @@ import { keysToArray } from './keysToArray';
 
 describe('keysToArray', () => {
   it('keysToArray debe hacer esto...', () => {
-    // TODO Your own assertion here
+    expect(keysToArray({ hola: 'mundo' })).toEqual(['hola']);
   });
 
   it('keysToArray debe hacer esto otro...', () => {
