@@ -8,9 +8,6 @@ Si notas algun error, por favor arreglalo con un nuevo commit.
 Si crees que es un falso-positivo, justificalo con un comentario aca en el PR.
 
 {{#jobs}}
-
-### {{displayName}}
-
 {{#scripts}}
 <details>
   <summary>
