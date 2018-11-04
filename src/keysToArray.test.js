@@ -1,4 +1,4 @@
-import { keysToArray } from './keysToArray';elif
+import { keysToArray } from './keysToArray';
 
 /*
  * Example of the assertions you can use for your tests:
