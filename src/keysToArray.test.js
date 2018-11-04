@@ -24,7 +24,9 @@ describe('keysToArray', () => {
     expect(keysToArray({ hola: 'mundo' })).toEqual(['hola']);
   });
 
-  it('keysToArray debe hacer esto otro...', () => {
-    // TODO Your own assertion here
+  it('keysToArray debe arrojar errores con malos argumentos...', () => {
+    expect(() => { keysToArray(); }).toThrow();
+    expect(() => { keysToArray([90]); }).toThrow();
+    expect(() => { keysToArray("what"); }).toThrow();
   });
 });
