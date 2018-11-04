@@ -12,13 +12,17 @@ Si crees que es un falso-positivo, jsutifícalo con un comentario acá en el PR.
 ### {{displayName}}
 
 {{#scripts}}
-
-**{{command}}**
+<details>
+  <summary>
+    <strong>
+     {{command}}
+    </strong>
+  </summary>
 
 ```
 {{&contents}}
 ```
-
+</details>
 <br />
 {{/scripts}}
 {{/jobs}}
