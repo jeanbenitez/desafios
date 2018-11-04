@@ -34,7 +34,7 @@ describe('arraySum', () => {
 
   it('arraySum - El parametro no es un array', () => {
     expect(() => { arraySum(123); }).toThrow();
-    expect(() => { arraySum("abc"); }).toThrow();
+    expect(() => { arraySum("abc"); }).toThrow();s
   });
 
   it('arraySum - El parametro no es un array de numeros', () => {
