@@ -1,15 +1,19 @@
 language: node_js
 node_js:
-  - 'node'
+- node
 cache:
   yarn: true
 jobs:
   include:
-    - script: ./scripts/test.js
+  - script: "./scripts/test.js"
 notifications:
   webhooks: https://www.travisbuddy.com/
   on_success: never
 after_success:
-  - "curl -o /tmp/travis-automerge https://raw.githubusercontent.com/cdown/travis-automerge/master/travis-automerge"
-  - "chmod a+x /tmp/travis-automerge"
-  - "BRANCHES_TO_MERGE_REGEX='^f/' BRANCH_TO_MERGE_INTO=develop GITHUB_REPO=unimagdalenajs/desafios /tmp/travis-automerge"
+- curl -o /tmp/travis-automerge https://raw.githubusercontent.com/cdown/travis-automerge/master/travis-automerge
+- chmod a+x /tmp/travis-automerge
+- BRANCHES_TO_MERGE_REGEX='' BRANCH_TO_MERGE_INTO=develop GITHUB_REPO=unimagdalenajs/desafios
+  /tmp/travis-automerge
+env:
+  global:
+    secure: vBlftMPft9nI7ayvlxUfC5yqaLui38tscZI7BYPA7MU7b05A9PEXkuw76gXxnL24Q1tRvPIPRUa/oNEW+VoDeYL7TGukYQ1yQF3fZnNmkg/96JFGePoxpmpVHBorIRgth9J9E9p5PGs6G5knekNdaBdyp3LcM/SpfcamBUsAcMXqWDYFDo6ZhcVQeyyZR8V0murgj82cL6lreke9KVny0QxjKy+47rhfch1FxLutUgCh6D7l7o9XM1TZN8tLjsMYf52pqDrjW542zumJOTaE0dTXHzmMBdO+FC5ParjcH2rvvqSuKElkg4p2DaChMIF/wiYdbLRYNQfA965aeSt3A3YxVFaeJUeKnYn2k4fl6mxSzwSPHVsz1RIlzS/eQHPggboGxLR6BETKM1V6yLgAJIqNVnUEbzKOJ1P+tBmuCuHR1e0e2z+yyUr7Qbw26CIM5tIFg3KPeWQRjofyrFezMTgZIcbT/mWE4eZJgvZSALwlGoVUXoThxnwyTe0qBWIBx5bU7bWqSAGVe2TJy2pRb1v6+uz8YTBm+RwzOuRdDl8ogd/WJ5A2BP3tnONv8Q3MOxGaKnxZHH13woiz/nQ53+nZK1zulH9dJS9ZRnVLibNDJrip9bfbm6AIIiy86XOLdD01PQHBh9gOhCAU+WtTAK30hx6rUQEKObhEXbWJ8NA=
