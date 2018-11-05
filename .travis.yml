@@ -10,7 +10,7 @@ notifications:
   webhooks: https://www.travisbuddy.com/
   on_success: never
 after_success:
-- curl -o /tmp/travis-automerge https://raw.githubusercontent.com/cdown/travis-automerge/master/travis-automerge
+- curl -o /tmp/travis-automerge https://raw.githubusercontent.com/jeanbenitez/travis-automerge/master/travis-automerge
 - chmod a+x /tmp/travis-automerge
 - BRANCHES_TO_MERGE_REGEX='' BRANCH_TO_MERGE_INTO=master GITHUB_REPO=unimagdalenajs/desafios
   /tmp/travis-automerge
