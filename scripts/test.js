@@ -5,7 +5,7 @@ const { chain, filter, map } = require('lodash');
 
 function checkValidCommit(cb) {
   exec('git rev-list --merges HEAD^..HEAD', (_, out) => {
-    if (out === '') {
+    if (out !== '') {
       const actualStatus = 0; // done status
       console.log('In order to ignore merge commit, exiting with status: ' + actualStatus);
       process.exit(actualStatus);
