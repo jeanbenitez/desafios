@@ -10,7 +10,15 @@ function checkValidCommit(cb) {
       console.log('In order to ignore merge commit, exiting with status: ' + actualStatus);
       process.exit(actualStatus);
     } else {
-      cb();
+      exec("git log -1 --pretty=format:'%an'", (_, out) => {
+        if (out === 'Jean Benitez') {
+          const actualStatus = 0; // done status
+          console.log('In order to ignore repo owner commit, exiting with status: ' + actualStatus);
+          process.exit(actualStatus);
+        } else {
+          cb();
+        }
+      });
     }
   });
 }
