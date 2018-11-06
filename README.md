@@ -19,7 +19,7 @@ npm i
 4. Crea un **Pull Request**
 5. Crea el issue/desafío que vas a agregar
 
-## Rules
+## Reglas
 
 - Cada PR debe tener **exactamente 3 archivos**: Tu solución, y 2 archivos mas para tu nuevo desafío. Todos los Pull Request que sigan ésta regla podrán ser cerrado **automáticamente**.
 - Si demoras mucho tiempo en desarrollar tu solución, se te des-asignará el desafío.
