@@ -1,11 +1,10 @@
 language: node_js
 node_js:
-  - 'node'
-# cache:
-#   yarn: true
-# jobs:
-#   include:
-#     - stage: test
-#       script: ./scripts/test.js
+- node
+cache:
+  yarn: true
+jobs:
+  include:
+  - script: "./scripts/test.js"
 notifications:
   webhooks: https://www.travisbuddy.com/

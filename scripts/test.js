@@ -3,6 +3,26 @@
 const { exec, spawnSync } = require('child_process');
 const { chain, filter, map } = require('lodash');
 
+function checkValidCommit(cb) {
+  exec('git rev-list --merges HEAD^..HEAD', (_, out) => {
+    if (out !== '') {
+      const actualStatus = 0; // done status
+      console.log('In order to ignore merge commit, exiting with status: ' + actualStatus);
+      process.exit(actualStatus);
+    } else {
+      exec("git log -1 --pretty=format:'%an'", (_, out) => {
+        if (out === 'Jean Benitez') {
+          const actualStatus = 0; // done status
+          console.log('In order to ignore repo owner commit, exiting with status: ' + actualStatus);
+          process.exit(actualStatus);
+        } else {
+          cb();
+        }
+      });
+    }
+  });
+}
+
 function seeChangedFiles(cb) {
   exec('git diff --name-status master', (err, out) => {
     const files = chain(out)
@@ -27,7 +47,7 @@ function runCommand(command, argv) {
   return status;
 }
 
-seeChangedFiles(files => {
+checkValidCommit(() => seeChangedFiles(files => {
   const modifiedImplems = filter(files, { isModified: true, isTest: false });
   const addedImplems = filter(files, { isAdded: true, isTest: false });
   const addedTests = filter(files, { isAdded: true, isTest: true });
@@ -110,4 +130,4 @@ Corriendo comando: "jest ${testFileToRun}"
   const actualStatus = shoudExitWithFailure ? 1 : lintStatus || testStatus;
   console.log('Exiting with status: ' + actualStatus);
   process.exit(actualStatus);
-});
+}));
