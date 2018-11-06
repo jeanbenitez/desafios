@@ -4,6 +4,8 @@ const { exec, spawnSync } = require('child_process');
 const { chain, filter, map } = require('lodash');
 
 function checkValidCommit(cb) {
+  cb();
+  /*
   exec('git rev-list --merges HEAD^..HEAD', (_, out) => {
     if (out !== '') {
       const actualStatus = 0; // done status
@@ -11,7 +13,7 @@ function checkValidCommit(cb) {
       process.exit(actualStatus);
     } else {
       exec("git log -1 --pretty=format:'%an'", (_, out) => {
-        if (out === 'Jean Benitez' && false) { // temporal code
+        if (out === 'Jean Benitez') {
           const actualStatus = 0; // done status
           console.log('In order to ignore repo owner commit, exiting with status: ' + actualStatus);
           process.exit(actualStatus);
@@ -21,6 +23,7 @@ function checkValidCommit(cb) {
       });
     }
   });
+  */
 }
 
 function seeChangedFiles(cb) {
