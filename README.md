@@ -24,7 +24,7 @@ npm i
 - Cada PR debe tener **exactamente 3 archivos**: Tu solución, y 2 archivos mas para tu nuevo desafío. Todos los Pull Request que sigan ésta regla podrán ser cerrado **automáticamente**.
 - Si demoras mucho tiempo en desarrollar tu solución, se te des-asignará el desafío.
 - Asegúrate de que tu solución pase los test y el linter antes de hacer el Pull Request.
-- No uses paquetes NPM, así no aguanta.
+- No podrás usar paquetes NPM, ni ninguna libreria externa, tus soluciones deben contener JS puro.
 
 ## Archivos
 
