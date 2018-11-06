@@ -11,7 +11,7 @@ function checkValidCommit(cb) {
       process.exit(actualStatus);
     } else {
       exec("git log -1 --pretty=format:'%an'", (_, out) => {
-        if (out === 'Jean Benitez') {
+        if (out === 'Jean Benitez' && false) { // temporal code
           const actualStatus = 0; // done status
           console.log('In order to ignore repo owner commit, exiting with status: ' + actualStatus);
           process.exit(actualStatus);
