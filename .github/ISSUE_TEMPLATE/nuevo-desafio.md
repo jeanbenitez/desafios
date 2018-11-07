@@ -3,7 +3,7 @@ name: Nuevo Desafío
 about: Crea un nuevo desafío para el cual debes agregar un nuevo test case!
 ---
 
-# [RecursiveFibonacci]
+# [nombre de la función]
 
 ### Link del PR donde agregáste el test case:
 
@@ -11,16 +11,15 @@ about: Crea un nuevo desafío para el cual debes agregar un nuevo test case!
 
 ### Donde debe implementarse:
 
-`src/RecursiveFibonacci.js`
+`src/<nombre de la función>.js`
 
 ### Los test que debe pasar:
 
-`src/RecursiveFibonacci.test.js`
+`src/<nombre de la función>.test.js`
 
 ### Description (optional):
 
-Programa que muestra los N primeros números de la sucesión de Fibonacci de forma recursiva. Ejemplo de los primeros números de Fibonacci: 0,1,1,2,3,5,8,13,21,34…
-Para este reto debe retornarme esta secuencia en un array de numeros `[0,1,1,2,3,5,8,13,21,34]`
+Si la función es compleja, deberías poner descripción al menos...
 
 ---
 
