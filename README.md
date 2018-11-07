@@ -5,9 +5,9 @@ El objetivo de este repositorio es programar, practicar y aprender Javascript, a
 ## Instalación
 
 0. Asegurate de tener instalado node v8.0.0 o superior, y npm ó yarn.
-1. Debes hacer FORK del repositorio. No clones éste repositorio, porq no vas a poder hacer push directos.
+1. Debes hacer FORK del repositorio. No clones éste repositorio, porque no vas a poder hacer push directos.
 2. Clona tu fork y ve al directorio del mismo
-3. En la terminal, ejecuta este comando 
+3. En la terminal, ejecuta este comando (usa el que tengas instalado)
 ```bash
 # Instalar dependencias con npm
 npm i
