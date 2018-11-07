@@ -19,7 +19,7 @@ yarn
 
 ## Cómo participar?
 
-1. Busca un issue/desafío que esté como **no asignado** aun
+1. Busca un issue/desafío que esté como **disponible** aun
 2. Implementar una solución pasando los archivos agregados por el lint y por el test (en la terminal usa `npm run lint src/laFuncion.js src/nuevoDesafio.test.js` and `npm run test src/nuevoDesafio.test.js`)
 3. Agrega un test case para el nuevo issue/desafío que vayas a proponer. Puedes usar `npm run generate <nombre_funcion>` para crear los dos nuevos archivos que necesitas agregar.
 4. Crea un **Pull Request**
